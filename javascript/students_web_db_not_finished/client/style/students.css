@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #343a40;
+}
+
+#content, #message {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #d9534f;
+}
+
+#createZone {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#list {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+#studentList {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#studentList tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#studentList td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}

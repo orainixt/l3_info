@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Votes</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" type="text/css" href="../utils/style/voter.css">
+</head>
+<body>
+    <div class="title">
+        <h1>Votes</h1>
+    </div>
+    <div class="no-vote" id="no-vote">
+        <label>Aucun vote en cours !</label>
+    </div>
+    <div class="vote-voter" id="vote">
+        <label id="vote-name">Nom du vote</label>
+        <div class="vote-actions">
+            <button name="actions">Pour</button>
+            <button name="actions">Contre</button>
+            <button name="actions">NPPV</button>
+            <button name="actions">Abstention</button>
+        </div>
+        <div class="user-vote">
+            <label id="vote-result">Vote ouvert</label>
+        </div>
+    </div>
+    <div class="voter-result" id="voter-result">
+        <canvas id = "voters-chart"></canvas>
+    </div>
+    <a href="/index">Page d'accueil</a>
+</body>
+</html>

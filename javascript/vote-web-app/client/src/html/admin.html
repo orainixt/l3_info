@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src ="./../scripts/admin.js"></script>
+    <link rel="stylesheet" type="text/css" href="../utils/style/admin.css">
+
+    <title>Administration</title>
+</head>
+<body>
+    <div class="title">
+        <h1>Administration des votes</h1>
+    </div>
+    <div class="admin-vote" id="admin-vote">
+        <div class = "vote-input">
+            <input type="text" id="vote-name" placeholder="Ecrivez ici ...">
+            <label id="vote-user">Nombre de votants : 0</label>
+            <button id="start-vote">Démarrer le vote</button>
+            <label id="number-voter">Nombre de connectés : 0</label>  
+            <label id="list-user"></label>
+        </div>
+        <div class="vote-result" id="vote-result">
+            <canvas id="results-chart"></canvas>
+        </div>
+    </div>
+    <div class="refused" id="refused">
+        <label>Connexion refusée, il y a déjà un administrateur</label>
+    </div>
+    <a href="/index">Retourner a la page principale</a>
+</body>
+</html>
