@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./../css/admin.css">
+  <title>Admin</title>
+</head>
+<body>
+  <h1>Admin</h1>
+
+  <nav>
+    <ul>
+        <li><a href="http://localhost:3000/admin" class="active">Admin</a></li>
+        <li><a href="http://localhost:3000/words">Gestion des mots</a></li>
+        <li><a href="http://localhost:3000/users">Formulaire</a></li>
+        <li><a href="http://localhost:3000/create_test">Créer un test</a></li>
+        <li><a href="#" id="logoutBtn">Se déconnecter</a></li>  
+    </ul>
+
+  </nav>
+
+  <aside id="filterPanel">
+    <h2>Tous les filtres</h2>
+
+    <div class="filter-group">
+      <label for="categorySelect">Catégorie</label>
+      <select id="categorySelect"></select>
+    </div>
+
+    <div class="filter-group">
+      <label for="conditionSelect">Conditions</label>
+      <select id="conditionSelect" multiple></select>
+    </div>
+
+    <div class="filter-group">
+      <label>Plage de valeurs</label>
+      <div class="range-group">
+        <input type="number" id="valueMin" placeholder="Minimum">
+        <input type="number" id="valueMax" placeholder="Maximum">
+      </div>
+    </div>
+
+    <button id="applyFiltersBtn">Appliquer les filtres</button>
+  </aside>
+
+  <section id="charts">
+    <div id="voterCounter"></div>
+    <div id="chartContainer">
+      <canvas id="myChart"></canvas>
+    </div>
+    <div id="voteStatus"></div>
+  </section>
+
+  <button id="resetBtn">reset bdd</button>
+  
+  <form id="add-admin-form" class="box" style="display:none;">
+    <h2>Ajouter un nouvel admin</h2>
+    <div class="filter-group">
+      <label for="newAdminName">Nom complet</label>
+      <input type="text" id="newAdminName" placeholder="Nom complet" required>
+    </div>
+    <div class="filter-group">
+      <label for="newAdminLogin">Login</label>
+      <input type="text" id="newAdminLogin" placeholder="Login" required>
+    </div>
+    <div class="filter-group">
+      <label for="newAdminPassword">Mot de passe</label>
+      <input type="password" id="newAdminPassword" placeholder="Mot de passe" required>
+    </div>
+    <button type="submit">Créer l'admin</button>
+    <p id="adminMessage"></p>
+  </form>
+
+    <script type="module" src="./..//javascripts/admin.js"></script>
+</body>
+</html>

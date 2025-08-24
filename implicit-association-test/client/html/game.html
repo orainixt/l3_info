@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Test d'Association Implicite</title>
+    <script type="module" src="./../javascripts/homepage.js" defer></script>
+    <link rel="stylesheet" href="../css/game.css">
+</head>
+<!-- Les "id" et "class" sont des copier-coller du site, peut-être à changer-->
+<body bgcolor="f1f1f1"> 
+    <h1>Test</h1>
+    <div id = "app-canvas"> 
+        <div class = "wrapper clearfix" >
+            <!-- Catégories de zone d'affichage --> 
+            <div id="category-row">
+                <div id = "left-screen"></div>
+                <div id = "right-screen"></div>
+                <div id = "mid-screen"></div>
+            </div>
+
+            <!-- Catégories d'affichage de contenu--> 
+            <div id="content-text"></div>
+            <div id = "content"></div>
+            <div id = "cross" hidden>❌</div>
+        </div> 
+    </div>
+    <div id="bias-canvas" hidden>
+        <h2>Ci-dessous vous pouvez retrouver l'interprétation de vos réponses au TAI</h2>
+        <div id="bias-display"></div> 
+        <div id="explain-bias"></div>
+    </div>
+    <button id="quit-button">Quitter le test</button>
+</body>

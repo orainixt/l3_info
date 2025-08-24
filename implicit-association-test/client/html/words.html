@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/word.css">
+  <title>Gestionnaire de mots</title>
+</head>
+<body>
+  <h1>Gestionnaire de Mots par Catégorie</h1>
+
+  <nav>
+    <ul>
+
+      <li><a href="http://localhost:3000/admin">Admin</a></li>
+      <li><a href="http://localhost:3000/words"  class="active">Gestion des mots</a></li>
+      <li><a href="http://localhost:3000/users">Formulaire</a></li>
+      <li><a href="http://localhost:3000/create_test">Créer un test</a></li>
+      <li><a href="#" id="logoutBtn">Se déconnecter</a></li>  
+
+    </ul>
+  </nav>
+
+  <div id="content"></div>
+
+  <form id="categoryForm">
+    <input type="text" id="categorieInput" placeholder="Nouvelle catégorie" required>
+    <input type="text" id="motInput" placeholder="Mots séparés par des virgules" required>
+    <button type="submit">Ajouter catégorie + mots</button>
+  </form>
+
+  <label for="categorySelect">Catégories :</label>
+  <select id="categorySelect" style="margin-bottom: 10px; width: 100%;">
+    <option value="">-- Sélectionnez une catégorie --</option>
+  </select>
+
+  <button id="openCategoryBtn">Ouvrir</button>
+  <button id="deleteCategoryBtn">Supprimer la catégorie</button>
+
+  <div id="wordsModal" style="display:none; flex-direction:column; padding:20px;">
+    <h2 id="modalTitle"></h2>
+    <form id="wordForm">
+      <input type="text" id="mot" placeholder="Ajouter un mot">
+      <button type="submit" id="saveWordBtn">Ajouter</button>
+    </form>
+    <select id="wordsSelect" size="10" style="margin-top:10px; width:100%"></select>
+    <button id="deleteWordBtn">Supprimer le mot sélectionné</button>
+    <button class="close-btn">Fermer</button>
+  </div>
+
+</body>
+</html>

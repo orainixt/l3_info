@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin - Gestion des catégories dynamiques</title>
+  <link rel="stylesheet" href="./../css/user.css" />
+</head>
+<body>
+  <h1>Gestion des Catégories du formulaire</h1>
+
+  <nav>
+   
+    <ul>
+        <li><a href="http://localhost:3000/admin" >Admin</a></li>
+        <li><a href="http://localhost:3000/words">Gestion des mots</a></li>
+        <li><a href="http://localhost:3000/users" class="active" >Formulaire</a></li>
+        <li><a href="http://localhost:3000/create_test">Créer un test</a></li>
+        <li><a href="#" id="logoutBtn">Se déconnecter</a></li>  
+    </ul>
+  </nav>
+
+  <div id="content"></div>
+
+  <div class="card">
+    <form id="categoryForm" class="form-inline">
+      <input type="text" id="categoryNameInput" placeholder="Nom de la catégorie" required />
+      <select id="categoryTypeInput" required>
+        <option value="String">String</option>
+        <option value="Number">Number</option>
+      </select>
+      <select id="formNumberInput" required>
+        <option value="1">Formulaire 1</option>
+        <option value="2">Formulaire 2</option>
+      </select>
+      <button type="submit" id="addCategoryBtn">Ajouter Catégorie</button>
+    </form>
+  </div>
+
+  <div id="existing-categories">
+    <label for="categorySelect">Catégories existantes :</label>
+    <select id="categorySelect"></select>
+    <div class="actions">
+      <button id="deleteCategoryBtn">Supprimer</button>
+    </div>
+  </div>
+
+  <div id="categoriesList"></div>
+
+</body>
+</html>

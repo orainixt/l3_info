@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/admin.css">
+  <title>Gérer les tests IAT</title>
+</head>
+<body>
+  <h1>Gérer les tests IAT</h1>
+
+  <nav>
+    <ul>
+        <li><a href="http://localhost:3000/admin">Admin</a></li>
+        <li><a href="http://localhost:3000/words">Gestion des mots</a></li>
+        <li><a href="http://localhost:3000/users">Formulaire</a></li>
+        <li><a href="http://localhost:3000/create_test"  class="active">Créer un test</a></li>
+        <li><a href="#" id="logoutBtn">Se déconnecter</a></li>  
+    </ul>
+  </nav>
+
+  <div id="message"></div>
+
+  <section>
+    <h2>Créer un nouveau test</h2>
+    <form id="createTestForm">
+      <div>
+        <label for="testTitle">Titre du test</label>
+        <input type="text" id="testTitle" name="titre" required />
+      </div>
+
+      <!-- Questions : cases à cocher -->
+      <fieldset>
+        <legend>Questions (champs utilisateur)</legend>
+        <div id="questionContainer"></div>
+      </fieldset>
+
+      <!-- Paires de catégories -->
+      <fieldset>
+        <legend>Définir les paires</legend>
+        <div>
+          <label for="pairLeft">Catégorie de gauche</label>
+          <select id="pairLeft"></select>
+          <label for="pairRight">Catégorie de droite</label>
+          <select id="pairRight"></select>
+          <button type="button" id="addPairBtn">Ajouter cette paire</button>
+        </div>
+        <ul id="pairsList"></ul>
+      </fieldset>
+
+      <fieldset>
+        <legend>Définir les deux catégories congruentes</legend>
+        <div id="congruenceOptions" class="options-container">
+          <!-- items créés dynamiquement -->
+        </div>
+        <div id="congruenceZone" class="drop-zone">
+          Faites glisser ici les 2 catégories congruentes
+        </div>
+      </fieldset>
+
+      <button type="submit">Créer le test</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Liste des tests existants</h2>
+    <table id="testsTable" border="1" cellpadding="5" cellspacing="0">
+      <thead>
+        <tr><th>Titre</th><th>Paires</th><th>Questions</th><th>Actions</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+</body>
+</html>

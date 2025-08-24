@@ -1,0 +1,8 @@
+[
+  {
+    "login": "superadmin",
+    "password": "$2b$10$48Ztkea8NtUrZTfuFGRF7eJntk1q7grD6PeG4RpTCfeNaWhn6Zh7W",
+    "name": "Super Admin",
+    "superAdmin": true
+  }
+]
