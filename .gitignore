@@ -408,5 +408,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+# Ignorer les données MongoDB
+implicit-association-test/server/dbData/
 
 # End of https://www.toptal.com/developers/gitignore/api/linux,windows,macos,node,java,python
